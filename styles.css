@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --background: #0f172a;
+    --secondary-background: #1e293b;
+    --text-color: #e5e7eb;
+    --text-color-secondary: #94a3b8;
+    --color-accent: #e5e7b6;
+    --color-success: #4ade80;
+    --color-danger: #f87171;
+}
+
+body {
+    background: url('./img/Forest-Night-Moonlit.png') center  / cover no-repeat fixed;
+    min-height: 100vh;
+    color: var(--text-color);
+    
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    max-width: 500px;
+    margin: 120px auto 0 auto;
+    backdrop-filter: blur(10px);
+    
+    
+}
+
+.stats-container {
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--secondary-background);
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details {
+    width: 100%;
+}
+
+#progressBar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--text-color-secondary);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#progress {
+    width: 0%;
+    height: 10px;
+    background-color: var(--color-accent);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#numbers {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+ input {
+    flex: 1;
+    padding: 15px;
+    background: var(--text-color-secondary);
+    border: 1px solid var(--secondary-background);
+    border-radius: 10px ;
+    outline: none;
+    color: var(--text-color);
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-background);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    opacity: 0.9;
+    background-color: var(--color-accent);
+    color: var(--background);
+    
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+    width: 100%;
+    list-style: none;
+}
+
+.taskItem {
+    width: 100%;
+    display: flex;
+    background-color: var(--text-color-secondary);
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.task input {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+    
+}
+
+.custom-checkbox {
+    width: 25px;
+    height: 25px;
+    background-color: var(--background);
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.checkbox:checked + .custom-checkbox {
+    background-color: var(--background);
+    border-color: var(--color-success);
+}
+
+.checkbox:checked + .custom-checkbox::after {
+    content: '✔';
+    color: var(--color-success);
+    font-size: 16px;
+}
+
+.completed p {
+    text-decoration: line-through;
+    color: var(--color-accent);
+}
+
+.taskItem i {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#delete:hover {
+    color: var(--color-danger);
+}
+
+#edit:hover {
+    color: var(--secondary-background);
+}
+
+.edit-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-background);
+  background: var(--background);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+
+
+
+
